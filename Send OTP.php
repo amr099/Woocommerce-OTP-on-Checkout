@@ -15,9 +15,9 @@ function wpcode_send_otp() {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS =>'[
             {
-                "apiKey": "a20ca8ea1b061753f2483cb82724fd5c",
+                "apiKey": "xxxx",
                 "numbers": [ "'.$phone.'" ],
-                "sender": "I-Makeup",
+                "sender": "xxx",
                 "method": "sms",
                 "lang": "ar",
                 "note": "Checkout Login"
@@ -54,7 +54,7 @@ function wpcode_verify_otp() {
         CURLOPT_CUSTOMREQUEST => 'POST',
         CURLOPT_POSTFIELDS =>'[
             {
-                "apiKey": "a20ca8ea1b061753f2483cb82724fd5c",
+                "apiKey": "xxx",
                 "numbers": [ "'.$phone.'" ],
                 "activeKey": "'.$otp.'"
             }
@@ -70,3 +70,4 @@ function wpcode_verify_otp() {
     echo $response;
     wp_die();
 }
+
